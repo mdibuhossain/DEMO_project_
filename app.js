@@ -118,8 +118,6 @@ app.post('/signup', async (req, res) => {
         res.status(400);
         res.send(error);
     }
-
-
 })
 
 

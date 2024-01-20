@@ -246,7 +246,7 @@ const signup_post = async (req, res) => {
             //if not exists then save the user in the database
             user.save().then(async (result) => {
                 // sendVerifyMail(req.body.fullname, req.body.email, result._id, req.body.role);
-                const sendMail = await sendVerifyMail(req.body.fullname, req.body.email, result._id, req.body.role, req);
+                // const sendMail = await sendVerifyMail(req.body.fullname, req.body.email, result._id, req.body.role, req);
                 if (req.body.role === 'cadet')
                     res.status(200).render('login', { err: 'Please ask you manager to confirm your account.' });
                 else
